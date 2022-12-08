@@ -216,8 +216,8 @@ namespace TestAPITraknus.Controllers
                 QueryExpression querysystemuserposition2 = new QueryExpression("position");
                 querysystemuserposition2.ColumnSet = new ColumnSet(true);
                 querysystemuserposition2.Criteria.AddCondition("name", ConditionOperator.Equal, pos);
-                EntityCollection GetPosition2 = service.RetrieveMultiple(querysystemuserposition2);
-                var posisi2 = GetPosition2.Entities.FirstOrDefault();
+                EntityCollection GetPosition2 = new EntityCollection();
+                var posisi2 = new Entity();
                 if (pos != null)
                 {
                     GetPosition2 = service.RetrieveMultiple(querysystemuserposition2);
@@ -267,9 +267,16 @@ namespace TestAPITraknus.Controllers
                 var idnyapos = systemuser.Contains("positionid") ? systemuser.GetAttributeValue<EntityReference>("positionid") : null;
                 if (idnyapos == null)
                 {
-                    Entity getPosid = service.Retrieve("position", posisi2.Id, new ColumnSet(true));
-                    var idpos = getPosid.ToEntityReference();
-                    myEntity["positionid"] = idpos;
+                    if (pos == null)
+                    {
+                        myEntity["positionid"] = null;
+                    }
+                    else
+                    {
+                        Entity getPosid = service.Retrieve("position", posisi2.Id, new ColumnSet(true));
+                        var idpos = getPosid.ToEntityReference();
+                        myEntity["positionid"] = idpos;
+                    }
                 }
                 else
                 {
@@ -282,9 +289,16 @@ namespace TestAPITraknus.Controllers
                 var idnyadiv = systemuser.Contains("agt_division") ? systemuser.GetAttributeValue<EntityReference>("agt_division") : null;
                 if (idnyadiv == null)
                 {
-                    Entity getDiv = service.Retrieve("new_division", divisi2.Id, new ColumnSet(true));
-                    var iddiv = getDiv.ToEntityReference();
-                    myEntity["agt_division"] = iddiv;
+                    if (div == null)
+                    {
+                        myEntity["agt_division"] = null;
+                    }
+                    else
+                    {
+                        Entity getDiv = service.Retrieve("new_division", divisi2.Id, new ColumnSet(true));
+                        var iddiv = getDiv.ToEntityReference();
+                        myEntity["agt_division"] = iddiv;
+                    }
                 }
                 else
                 {
@@ -301,6 +315,11 @@ namespace TestAPITraknus.Controllers
                 if (pos == null)
                 {
                     myEntity["positionid"] = null;
+                }
+                if (pos == null && div == null)
+                {
+                    myEntity["positionid"] = null;
+                    myEntity["agt_division"] = null;
                 }
 
 
