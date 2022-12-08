@@ -1,0 +1,386 @@
+{
+	"info": {
+		"_postman_id": "7e8b0e45-d548-42a2-9305-54e4ebc2fbb7",
+		"name": "AGT_LEADS(TRAKNUS)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8191298"
+	},
+	"item": [
+		{
+			"name": "GET LEADS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44337/api/leads",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44337",
+					"path": [
+						"api",
+						"leads"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET LEADS BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44337/api/leads/07c02567-2372-ed11-9406-005056938eba",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44337",
+					"path": [
+						"api",
+						"leads",
+						"07c02567-2372-ed11-9406-005056938eba"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST LEADS",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"agt_customer\": {\r\n        \"Id\": \"f13c3814-553e-e911-941e-0050569336b0\",\r\n        \"LogicalName\": \"account\",\r\n        \"Name\": \"2 PUTRA ABADI, CV\"\r\n    },\r\n    \"agt_branch1\": \"AE2FEBC6-AC60-ED11-9406-005056938EBA\",\r\n    \"agt_typeleads\": 2,\r\n    \"agt_subject\": \"bbb\",\r\n    \"agt_description\": \"ccc\",\r\n    \"agt_urgency\": 1,\r\n    \"agt_channel\": 4\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44337/api/leads",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44337",
+					"path": [
+						"api",
+						"leads"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT LEADS",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    //\"agt_leadsid\" : \"c32207a7-c76f-ed11-9406-005056938eba\",\r\n     //\"agt_customer\" : \"FF8F47F2-77A1-E211-8445-005056926D22\",\r\n     //\"agt_branch1\" : \"AE2FEBC6-AC60-ED11-9406-005056938EBA\",\r\n     //\"agt_typeleads\" : 1,\r\n     \"agt_subject\" : \"123\"\r\n     //\"agt_description\" : \"dor\"\r\n     //\"agt_urgency\" : 1,\r\n     //\"agt_channel\" : 4\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44337/api/leads/07c02567-2372-ed11-9406-005056938eba",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44337",
+					"path": [
+						"api",
+						"leads",
+						"07c02567-2372-ed11-9406-005056938eba"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE LEADS",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44337/api/leads/9fb9ff42-4466-ed11-9406-005056938eba",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44337",
+					"path": [
+						"api",
+						"leads",
+						"9fb9ff42-4466-ed11-9406-005056938eba"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET LEADS V2 WITH ROUTE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44337/api/leads/getallleads",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44337",
+					"path": [
+						"api",
+						"leads",
+						"getallleads"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET LEADS BY ID V2 WITH ROUTE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44337/api/leads/getid/67be87c9-3d72-ed11-9406-005056938eba",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44337",
+					"path": [
+						"api",
+						"leads",
+						"getid",
+						"67be87c9-3d72-ed11-9406-005056938eba"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST LEADS V2 WITH ROUTE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"agt_customer\": {\r\n        \"Id\": \"f13c3814-553e-e911-941e-0050569336b0\",\r\n        \"LogicalName\": \"account\",\r\n        \"Name\": \"2 PUTRA ABADI, CV\"\r\n    },\r\n    \"agt_branch1\": \"AE2FEBC6-AC60-ED11-9406-005056938EBA\",\r\n    \"agt_typeleads\": 2,\r\n    \"agt_subject\": \"bbb\",\r\n    \"agt_description\": \"ccc\",\r\n    \"agt_urgency\": 1,\r\n    \"agt_channel\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44337/api/leads/createleads",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44337",
+					"path": [
+						"api",
+						"leads",
+						"createleads"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT LEADS V2 WITH ROUTE",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    //\"agt_leadsid\" : \"c32207a7-c76f-ed11-9406-005056938eba\",\r\n     //\"agt_customer\" : \"FF8F47F2-77A1-E211-8445-005056926D22\",\r\n     //\"agt_branch1\" : \"AE2FEBC6-AC60-ED11-9406-005056938EBA\",\r\n     //\"agt_typeleads\" : 1,\r\n     \"agt_subject\" : \"ganti coba\"\r\n    // \"agt_description\" : \"dor\"\r\n     //\"agt_urgency\" : 1,\r\n     //\"agt_channel\" : 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44337/api/leads/updateleads/67be87c9-3d72-ed11-9406-005056938eba",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44337",
+					"path": [
+						"api",
+						"leads",
+						"updateleads",
+						"67be87c9-3d72-ed11-9406-005056938eba"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE LEADS V2 WITH ROUTE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44337/api/leads/deleteleads/67be87c9-3d72-ed11-9406-005056938eba",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44337",
+					"path": [
+						"api",
+						"leads",
+						"deleteleads",
+						"67be87c9-3d72-ed11-9406-005056938eba"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ADMIN",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44337/api/systemuser/getid/1CBA90DC-4DE9-E111-9AA2-544249894792",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44337",
+					"path": [
+						"api",
+						"systemuser",
+						"getid",
+						"1CBA90DC-4DE9-E111-9AA2-544249894792"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE ADMIN DIVISION AND POSITION",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    //\"positionid\" : \"1CBA90DC-4DE9-E111-9AA2-544249894792\"\r\n    \"positionidname\": \"Key Account\",\r\n    \"divisionidname\": \"SV\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44337/api/systemuser/updatesystemuser/1CBA90DC-4DE9-E111-9AA2-544249894792",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44337",
+					"path": [
+						"api",
+						"systemuser",
+						"updatesystemuser",
+						"1CBA90DC-4DE9-E111-9AA2-544249894792"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET POSITION",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44337/api/systemuser/getposition",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44337",
+					"path": [
+						"api",
+						"systemuser",
+						"getposition"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET DIVISION",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44337/api/systemuser/getdivision",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44337",
+					"path": [
+						"api",
+						"systemuser",
+						"getdivision"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
